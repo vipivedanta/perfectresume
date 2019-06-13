@@ -9,6 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
 
         <!-- Styles -->
         <style>
@@ -65,9 +66,7 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            
-
+        <div class="container">
             <div class="content">
                <app-root></app-root>                
             </div>
