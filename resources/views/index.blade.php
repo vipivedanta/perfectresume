@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <base href="/">
 
         <title>Laravel</title>
 
@@ -68,11 +69,7 @@
             
 
             <div class="content">
-                <div class="title m-b-md">
-                    Perfect Resume
-                </div>
-
-                
+               <app-root></app-root>                
             </div>
         </div>
 
