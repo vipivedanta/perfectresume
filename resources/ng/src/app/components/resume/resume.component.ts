@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgRedux,NgReduxModule } from '@angular-redux/store';
+import { IAppState,rootReducer } from '../../store';
 
 @Component({
   selector: 'app-resume',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResumeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ngRedux: NgRedux<IAppState>) { };
 
   ngOnInit() {
+  }
+
+  testRun(){
+  	this.ngRedux.dispatch({type:'add'});
   }
 
 }

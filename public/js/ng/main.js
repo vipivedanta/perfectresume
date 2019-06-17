@@ -134,12 +134,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _components_resume_resume_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/resume/resume.component */ "./src/app/components/resume/resume.component.ts");
-/* harmony import */ var _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/dashboard/dashboard.component */ "./src/app/components/dashboard/dashboard.component.ts");
-/* harmony import */ var _components_templates_header_header_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/templates/header/header.component */ "./src/app/components/templates/header/header.component.ts");
-/* harmony import */ var _components_templates_footer_footer_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/templates/footer/footer.component */ "./src/app/components/templates/footer/footer.component.ts");
+/* harmony import */ var _angular_redux_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular-redux/store */ "./node_modules/@angular-redux/store/fesm5/angular-redux-store.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./store */ "./src/app/store.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _components_resume_resume_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/resume/resume.component */ "./src/app/components/resume/resume.component.ts");
+/* harmony import */ var _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/dashboard/dashboard.component */ "./src/app/components/dashboard/dashboard.component.ts");
+/* harmony import */ var _components_templates_header_header_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/templates/header/header.component */ "./src/app/components/templates/header/header.component.ts");
+/* harmony import */ var _components_templates_footer_footer_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/templates/footer/footer.component */ "./src/app/components/templates/footer/footer.component.ts");
+
+
 
 
 
@@ -151,25 +155,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AppModule = /** @class */ (function () {
-    function AppModule() {
+    function AppModule(ngRedux) {
+        ngRedux.configureStore(_store__WEBPACK_IMPORTED_MODULE_5__["rootReducer"], {});
     }
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _components_resume_resume_component__WEBPACK_IMPORTED_MODULE_6__["ResumeComponent"],
-                _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__["DashboardComponent"],
-                _components_templates_header_header_component__WEBPACK_IMPORTED_MODULE_8__["HeaderComponent"],
-                _components_templates_footer_footer_component__WEBPACK_IMPORTED_MODULE_9__["FooterComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+                _components_resume_resume_component__WEBPACK_IMPORTED_MODULE_8__["ResumeComponent"],
+                _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__["DashboardComponent"],
+                _components_templates_header_header_component__WEBPACK_IMPORTED_MODULE_10__["HeaderComponent"],
+                _components_templates_footer_footer_component__WEBPACK_IMPORTED_MODULE_11__["FooterComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbModule"]
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbModule"],
+                _angular_redux_store__WEBPACK_IMPORTED_MODULE_4__["NgReduxModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
-        })
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_redux_store__WEBPACK_IMPORTED_MODULE_4__["NgRedux"]])
     ], AppModule);
     return AppModule;
 }());
@@ -252,7 +259,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  resume works!\n</p>\n"
+module.exports = "<p>\n  resume works!\n</p>\n\n<button type=\"button\" (click)=\"testRun()\">Test Run</button>"
 
 /***/ }),
 
@@ -268,12 +275,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResumeComponent", function() { return ResumeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_redux_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular-redux/store */ "./node_modules/@angular-redux/store/fesm5/angular-redux-store.js");
+
 
 
 var ResumeComponent = /** @class */ (function () {
-    function ResumeComponent() {
+    function ResumeComponent(ngRedux) {
+        this.ngRedux = ngRedux;
     }
+    ;
     ResumeComponent.prototype.ngOnInit = function () {
+    };
+    ResumeComponent.prototype.testRun = function () {
+        this.ngRedux.dispatch({ type: 'add' });
     };
     ResumeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -281,7 +295,7 @@ var ResumeComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./resume.component.html */ "./src/app/components/resume/resume.component.html"),
             styles: [__webpack_require__(/*! ./resume.component.css */ "./src/app/components/resume/resume.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_redux_store__WEBPACK_IMPORTED_MODULE_2__["NgRedux"]])
     ], ResumeComponent);
     return ResumeComponent;
 }());
@@ -398,6 +412,31 @@ var HeaderComponent = /** @class */ (function () {
     return HeaderComponent;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/store.ts":
+/*!**************************!*\
+  !*** ./src/app/store.ts ***!
+  \**************************/
+/*! exports provided: rootReducer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rootReducer", function() { return rootReducer; });
+function rootReducer(state, action) {
+    switch (action.type) {
+        case "add":
+            alert('adding');
+            break;
+        default:
+            alert('default');
+            break;
+    }
+    return state;
+}
 
 
 /***/ }),
