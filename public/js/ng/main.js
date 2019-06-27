@@ -203,7 +203,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  dashboard works!\n</p>\n"
+module.exports = "<div class=\"col-12\">\n<div class=\"row\">\n\n\t<div class=\"card\" style=\"width: 18rem;\">\n\t  <img class=\"card-img-top\" src=\"https://via.placeholder.com/150x200.png?\" alt=\"Card image cap\">\n\t  <div class=\"card-body\">\n\t    <h5 class=\"card-title\">Card title</h5>\n\t    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n\t    <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n\t  </div>\n\t</div>\n\n\t<div class=\"card\" style=\"width: 18rem;\">\n\t  <img class=\"card-img-top\" src=\"https://via.placeholder.com/150x200.png?\" alt=\"Card image cap\">\n\t  <div class=\"card-body\">\n\t    <h5 class=\"card-title\">Card title</h5>\n\t    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n\t    <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n\t  </div>\n\t</div>\n\n\t<div class=\"card\" style=\"width: 18rem;\">\n\t  <img class=\"card-img-top\" src=\"https://via.placeholder.com/150x200.png?\" alt=\"Card image cap\">\n\t  <div class=\"card-body\">\n\t    <h5 class=\"card-title\">Card title</h5>\n\t    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n\t    <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n\t  </div>\n\t</div>\n\n</div>\n<div class=\"row\">\n\n\t<div class=\"card\" style=\"width: 18rem;\">\n\t  <img class=\"card-img-top\" src=\"https://via.placeholder.com/150x200.png?\" alt=\"Card image cap\">\n\t  <div class=\"card-body\">\n\t    <h5 class=\"card-title\">Card title</h5>\n\t    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n\t    <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n\t  </div>\n\t</div>\n\n\t<div class=\"card\" style=\"width: 18rem;\">\n\t  <img class=\"card-img-top\" src=\"https://via.placeholder.com/150x200.png?\" alt=\"Card image cap\">\n\t  <div class=\"card-body\">\n\t    <h5 class=\"card-title\">Card title</h5>\n\t    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n\t    <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n\t  </div>\n\t</div>\n\n\t<div class=\"card\" style=\"width: 18rem;\">\n\t  <img class=\"card-img-top\" src=\"https://via.placeholder.com/150x200.png?\" alt=\"Card image cap\">\n\t  <div class=\"card-body\">\n\t    <h5 class=\"card-title\">Card title</h5>\n\t    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n\t    <a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n\t  </div>\n\t</div>\t\n\n</div>\n</div>"
 
 /***/ }),
 
@@ -259,7 +259,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  resume works!\n</p>\n\n<button type=\"button\" (click)=\"testRun()\">Test Run</button>"
+module.exports = "<p>\n  resume works!\n</p>\n\n"
 
 /***/ }),
 
@@ -429,10 +429,8 @@ __webpack_require__.r(__webpack_exports__);
 function rootReducer(state, action) {
     switch (action.type) {
         case "add":
-            alert('adding');
             break;
         default:
-            alert('default');
             break;
     }
     return state;
